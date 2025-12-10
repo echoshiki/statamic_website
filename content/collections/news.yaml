@@ -1,0 +1,18 @@
+title: 新闻
+template: news/show
+layout: layout
+mount: 3fe3934e-135f-4089-955b-148536e42dbb
+taxonomies:
+  - news_categories
+revisions: false
+route: 'news/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

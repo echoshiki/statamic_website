@@ -1,0 +1,114 @@
+title: 新闻
+tabs:
+  main:
+    display: 主要的
+    sections:
+      -
+        fields:
+          -
+            handle: news_categories
+            field:
+              type: terms
+              taxonomies:
+                - news_categories
+              display: 分类
+              mode: select
+              validate:
+                - required
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 标题
+          -
+            handle: description
+            field:
+              type: textarea
+              display: 摘要
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 内容
+              container: assets
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - table
+              sets:
+                '':
+                  display: 新集组
+                  sets:
+                    content_image:
+                      display: 内容图片
+                      fields:
+                        -
+                          handle: image_url
+                          field:
+                            container: assets
+                            folder: news
+                            dynamic: slug
+                            type: assets
+                            display: 插入图片
+                        -
+                          handle: image_description
+                          field:
+                            type: text
+                            display: 图片描述
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+                - 'max:200'
+              show_regenerate: true
+          -
+            handle: cover
+            field:
+              max_files: 1
+              container: assets
+              folder: news
+              dynamic: slug
+              type: assets
+              display: 封面图
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              display: 发布日期
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true

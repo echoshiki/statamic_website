@@ -1,0 +1,18 @@
+title: 产品
+template: products/show
+layout: layout
+mount: 3f0535d1-3689-49c4-9769-56d5a0037ac4
+taxonomies:
+  - product_categories
+revisions: false
+route: 'product/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

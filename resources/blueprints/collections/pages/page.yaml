@@ -43,12 +43,11 @@ tabs:
       -
         fields:
           -
-            handle: thumb
+            handle: cover
             field:
               max_files: 1
               container: assets
               folder: company
-              dynamic: slug
               type: assets
               display: 封面
           -
@@ -66,3 +65,11 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
