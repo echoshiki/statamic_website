@@ -1,0 +1,22 @@
+name: su
+super: true
+id: 4694ff41-3a53-4b33-a9f7-4cb5b7ee3139
+password_hash: $2y$12$yDw0P6.3nuj9NC1DiFcopu1omDkObJJyUZHpQfUgwAnKGCsFToZMy
+preferences:
+  locale: zh_CN
+  favorites: {  }
+  collections:
+    product:
+      columns:
+        - title
+        - slug
+        - date
+        - status
+        - product_categories
+    news:
+      columns:
+        - title
+        - author
+        - date
+        - status
+        - news_categories
