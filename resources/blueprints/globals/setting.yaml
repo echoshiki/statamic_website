@@ -1,0 +1,162 @@
+tabs:
+  main:
+    display: 主要的
+    sections:
+      -
+        display: 基本信息
+        fields:
+          -
+            handle: site_name
+            field:
+              type: text
+              display: 站点名称
+              instructions: 显示在前端的网站中文名称
+              width: 50
+          -
+            handle: site_name_en
+            field:
+              type: text
+              display: 英文名称
+              width: 50
+              instructions: 显示在前端的网站英文名称
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: assets
+              folder: static
+              type: assets
+              display: Logo
+          -
+            handle: mobile
+            field:
+              type: text
+              display: 手机
+              width: 50
+          -
+            handle: telephone
+            field:
+              type: text
+              display: 座机
+              width: 50
+          -
+            handle: email
+            field:
+              type: text
+              display: 邮箱
+              width: 50
+          -
+            handle: contact_person
+            field:
+              type: text
+              display: 联系人
+              width: 50
+          -
+            handle: address
+            field:
+              type: text
+              display: 详细地址
+          -
+            handle: icp_number
+            field:
+              type: text
+              display: ICP备案号
+              width: 50
+          -
+            handle: police_number
+            field:
+              type: text
+              display: 公安备案号
+              width: 50
+          -
+            handle: wechat_qrcode
+            field:
+              max_files: 1
+              container: assets
+              folder: static
+              type: assets
+              display: 微信二维码
+              width: 50
+          -
+            handle: site_qrcode
+            field:
+              max_files: 1
+              container: assets
+              folder: static
+              type: assets
+              display: 站点二维码
+              width: 50
+      -
+        display: 内容设置
+        fields:
+          -
+            handle: company_introduce
+            field:
+              type: markdown
+              display: 公司介绍
+          -
+            handle: banner_pc
+            field:
+              max_sets: 5
+              type: replicator
+              display: PC端轮播图
+              sets:
+                '':
+                  display: 新集组
+                  sets:
+                    '':
+                      display: 新集合
+                      fields:
+                        -
+                          handle: banner_image
+                          field:
+                            max_files: 1
+                            container: assets
+                            folder: banners
+                            type: assets
+                            display: 轮播图
+                        -
+                          handle: banner_title
+                          field:
+                            type: text
+                            display: 描述文案
+                            width: 50
+                        -
+                          handle: banner_link
+                          field:
+                            type: link
+                            display: 跳转
+                            width: 50
+          -
+            handle: banner_mobile
+            field:
+              max_sets: 5
+              type: replicator
+              display: 移动端轮播图
+              sets:
+                '':
+                  display: 新集组
+                  sets:
+                    '':
+                      display: 新集合
+                      fields:
+                        -
+                          handle: banner_image
+                          field:
+                            max_files: 1
+                            container: assets
+                            folder: banners
+                            type: assets
+                            display: 轮播图
+                        -
+                          handle: banner_title
+                          field:
+                            type: text
+                            display: 描述文案
+                            width: 50
+                        -
+                          handle: banner_link
+                          field:
+                            type: link
+                            display: 跳转
+                            width: 50
