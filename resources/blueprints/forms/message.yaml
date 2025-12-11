@@ -1,0 +1,29 @@
+tabs:
+  main:
+    display: 主要的
+    sections:
+      -
+        fields:
+          -
+            handle: nickname
+            field:
+              type: text
+              display: 昵称
+          -
+            handle: mobile
+            field:
+              type: integer
+              display: 手机
+          -
+            handle: email
+            field:
+              type: text
+              display: 邮箱
+          -
+            handle: content
+            field:
+              type: textarea
+              display: 内容
+              instructions: 留下您的建议和咨询，我们会第一时间联系您。
+              validate:
+                - required

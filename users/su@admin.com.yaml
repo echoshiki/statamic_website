@@ -15,8 +15,7 @@ preferences:
         - product_categories
     news:
       columns:
+        - news_categories
         - title
-        - author
         - date
         - status
-        - news_categories

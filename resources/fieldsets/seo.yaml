@@ -1,0 +1,26 @@
+title: 'SEO 设置'
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: 'SEO 标题'
+      instructions: 留空则默认使用页面标题。
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: 'SEO 描述'
+      instructions: 搜索结果中显示的摘要。留空则不显示或由搜索引擎自动抓取。
+  -
+    handle: seo_canonical_url
+    field:
+      type: text
+      display: 规范链接
+      instructions: 仅当此内容是其他页面的副本时填写，否则请留空。
+  -
+    handle: seo_noindex
+    field:
+      type: toggle
+      display: 禁止搜索引擎收录
+      instructions: 开启后，搜索引擎将不会索引此页面。

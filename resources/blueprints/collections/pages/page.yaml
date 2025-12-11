@@ -4,6 +4,7 @@ tabs:
     display: 主要的
     sections:
       -
+        display: 内容
         fields:
           -
             handle: title
@@ -20,34 +21,44 @@ tabs:
           -
             handle: content
             field:
-              type: markdown
-              display: Content
-              localizable: true
+              remove_empty_nodes: false
+              type: bard
+              display: 页面详情
+              sets:
+                content_image:
+                  display: 内容图片
+                  instructions: 插入图片
+                  icon: media-image-picture-gallery
+                  sets:
+                    '':
+                      display: 内容图片
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            folder: pages
+                            type: assets
+                            display: 插入图片
+                        -
+                          handle: description
+                          field:
+                            type: text
+                            display: 图片描述
           -
-            handle: author
-            field:
-              type: users
-              display: Author
-              default: current
-              localizable: true
-              max_items: 1
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
+            import: seo
   sidebar:
     display: Sidebar
     sections:
       -
+        display: 页面设置
         fields:
           -
             handle: cover
             field:
               max_files: 1
               container: assets
-              folder: company
+              folder: pages
               type: assets
               display: 封面
           -
@@ -57,6 +68,22 @@ tabs:
               localizable: true
               validate: 'max:200'
           -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
             handle: parent
             field:
               type: entries
@@ -65,11 +92,10 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+              display: 上级
           -
-            handle: date
+            handle: template
             field:
-              type: date
-              required: true
-              default: now
-              validate:
-                - required
+              type: template
+              display: Template
+              localizable: true

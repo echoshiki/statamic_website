@@ -1,0 +1,76 @@
+title: 资质
+tabs:
+  main:
+    display: 主要的
+    sections:
+      -
+        display: 内容
+        fields:
+          -
+            handle: honor_categories
+            field:
+              type: terms
+              taxonomies:
+                - honor_categories
+              display: 资质分类
+              mode: select
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 资质名称
+          -
+            handle: description
+            field:
+              type: textarea
+              display: 资质摘要
+          -
+            handle: cover
+            field:
+              max_files: 1
+              container: assets
+              folder: honors
+              restrict: true
+              type: assets
+              display: 资质图片
+              validate:
+                - required
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: 设置
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true

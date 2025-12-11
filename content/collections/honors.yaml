@@ -1,0 +1,17 @@
+title: 资质
+template: honors/show
+layout: layout
+mount: 16a8882f-c9d8-41be-8e09-3f8a27772bca
+taxonomies:
+  - honor_categories
+revisions: false
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

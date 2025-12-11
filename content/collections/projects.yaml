@@ -1,0 +1,16 @@
+title: 案例
+template: projects/show
+layout: layout
+mount: 487afcaf-5e2c-43da-9ed5-ac5658bfda4c
+taxonomies:
+  - project_categories
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

@@ -1,4 +1,4 @@
-title: 新闻
+title: 产品
 tabs:
   main:
     display: 主要的
@@ -7,15 +7,13 @@ tabs:
         display: 内容
         fields:
           -
-            handle: news_categories
+            handle: product_categories
             field:
               type: terms
               taxonomies:
-                - news_categories
+                - product_categories
               display: 分类
               mode: select
-              validate:
-                - required
           -
             handle: title
             field:
@@ -23,18 +21,26 @@ tabs:
               required: true
               validate:
                 - required
-              display: 标题
+              display: 产品名称
           -
             handle: description
             field:
               type: textarea
               display: 摘要
           -
+            handle: photo_group
+            field:
+              container: assets
+              folder: products
+              dynamic: slug
+              type: assets
+              display: 产品图组
+          -
             handle: content
             field:
               remove_empty_nodes: false
               type: bard
-              display: 详情
+              display: 产品详情
               container: assets
               buttons:
                 - h2
@@ -84,6 +90,11 @@ tabs:
               dynamic: slug
               type: assets
               display: 封面图
+          -
+            handle: price
+            field:
+              type: float
+              display: 价格
           -
             handle: slug
             field:

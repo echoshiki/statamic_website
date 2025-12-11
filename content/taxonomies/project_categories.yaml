@@ -1,0 +1,7 @@
+title: 案例分类
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'
+    refresh: true
+layout: layout

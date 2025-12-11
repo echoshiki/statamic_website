@@ -1,0 +1,87 @@
+title: 案例
+tabs:
+  main:
+    display: 主要的
+    sections:
+      -
+        display: 内容
+        fields:
+          -
+            handle: project_categories
+            field:
+              type: terms
+              taxonomies:
+                - project_categories
+              display: 案例分类
+              mode: select
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 项目标题
+          -
+            handle: description
+            field:
+              type: textarea
+              display: 项目摘要
+          -
+            handle: project_date
+            field:
+              type: date
+              display: 项目时间
+          -
+            handle: image_group
+            field:
+              max_files: 5
+              container: assets
+              folder: projects
+              dynamic: slug
+              type: assets
+              display: 项目图组
+          -
+            handle: content
+            field:
+              type: markdown
+              display: 详细内容
+              localizable: true
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: 设置
+        fields:
+          -
+            handle: cover
+            field:
+              max_files: 1
+              container: assets
+              dynamic: slug
+              type: assets
+              display: 封面图
+              instructions: 显示在列表上的项目图片。
+              folder: projects
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
