@@ -10,7 +10,7 @@ tabs:
             field:
               type: text
               display: 站点名称
-              instructions: 显示在前端的网站中文名称
+              instructions: 显示在前端的网站中文名称。
               width: 50
           -
             handle: site_name_en
@@ -18,7 +18,7 @@ tabs:
               type: text
               display: 英文名称
               width: 50
-              instructions: 显示在前端的网站英文名称
+              instructions: 显示在前端的网站英文名称。
           -
             handle: logo
             field:
@@ -26,7 +26,8 @@ tabs:
               container: assets
               folder: static
               type: assets
-              display: Logo
+              display: '站点 Logo'
+              instructions: '图片宽度控制在 720px 以下。'
           -
             handle: mobile
             field:
@@ -86,6 +87,12 @@ tabs:
               type: assets
               display: 站点二维码
               width: 50
+          -
+            handle: copyright
+            field:
+              type: text
+              display: 版权信息
+              instructions: 显示在页面底部的版权信息。
       -
         display: 内容设置
         fields:
@@ -160,3 +167,5 @@ tabs:
                             type: link
                             display: 跳转
                             width: 50
+          -
+            import: seo

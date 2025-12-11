@@ -59,14 +59,17 @@ tabs:
                           field:
                             container: assets
                             folder: news
-                            dynamic: slug
                             type: assets
                             display: 插入图片
+                            restrict: true
                         -
                           handle: description
                           field:
                             type: text
                             display: 图片描述
+      -
+        display: 新区段
+        fields:
           -
             import: seo
   sidebar:
@@ -81,9 +84,9 @@ tabs:
               max_files: 1
               container: assets
               folder: news
-              dynamic: slug
               type: assets
-              display: 封面图
+              display: 封面
+              restrict: true
           -
             handle: slug
             field:

@@ -2,3 +2,4 @@ title: 站点设置
 data:
   site_name: 企业站点
   site_name_en: 'Company Website'
+  seo_noindex: false

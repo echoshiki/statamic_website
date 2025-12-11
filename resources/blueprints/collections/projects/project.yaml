@@ -38,7 +38,6 @@ tabs:
               max_files: 5
               container: assets
               folder: projects
-              dynamic: slug
               type: assets
               display: 项目图组
           -
@@ -60,9 +59,8 @@ tabs:
             field:
               max_files: 1
               container: assets
-              dynamic: slug
               type: assets
-              display: 封面图
+              display: 封面
               instructions: 显示在列表上的项目图片。
               folder: projects
           -

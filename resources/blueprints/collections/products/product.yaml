@@ -32,9 +32,9 @@ tabs:
             field:
               container: assets
               folder: products
-              dynamic: slug
               type: assets
               display: 产品图组
+              restrict: true
           -
             handle: content
             field:
@@ -64,10 +64,10 @@ tabs:
                           handle: image
                           field:
                             container: assets
-                            folder: news
-                            dynamic: slug
+                            folder: products
                             type: assets
                             display: 插入图片
+                            restrict: true
                         -
                           handle: description
                           field:
@@ -86,10 +86,10 @@ tabs:
             field:
               max_files: 1
               container: assets
-              folder: news
-              dynamic: slug
+              folder: products
               type: assets
-              display: 封面图
+              display: 封面
+              restrict: true
           -
             handle: price
             field:

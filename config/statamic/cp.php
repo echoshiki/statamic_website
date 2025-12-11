@@ -53,7 +53,20 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+        [
+            'type' => 'collection',
+            'collection' => 'products',
+            'limit' => 5,
+            'title' => '最新产品',
+            'width' => 50,
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'news',
+            'limit' => 5,
+            'title' => '最新文章',
+            'width' => 50,
+        ],
     ],
 
     /*

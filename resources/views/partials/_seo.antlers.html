@@ -1,0 +1,8 @@
+<title>{{ seo_title or title or setting:seo_title }} | {{ site:name }}</title>
+<meta name="description" content="{{ $seo_description or setting:seo_description or title }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ seo_title or title }}">
+<meta property="og:description" content="{{ $seo_description or setting:seo_description or title }}">
+<meta property="og:url" content="{{ permalink }}">
+<meta property="og:site_name" content="{{ site:name }}">
+<link rel="canonical" href="{{ seo_canonical_url or permalink }}">
